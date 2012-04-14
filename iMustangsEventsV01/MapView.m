@@ -183,145 +183,145 @@
     
 	myAnnotation1.coordinate=theCoordinate1;
 	myAnnotation1.title=@"Wellness Center";
-	myAnnotation1.subtitle=@"in the city";
+	myAnnotation1.subtitle=@"";
 	
 	MyAnnotation* myAnnotation2=[[MyAnnotation alloc] init];
 	
 	myAnnotation2.coordinate=theCoordinate2;
 	myAnnotation2.title=@"President's House";
-	myAnnotation2.subtitle=@"on a Bridge";
+	myAnnotation2.subtitle=@"";
 	
 	MyAnnotation* myAnnotation3=[[MyAnnotation alloc] init];
 	
 	myAnnotation3.coordinate=theCoordinate3;
 	myAnnotation3.title=@"DL Ligon Coliseum";
-	myAnnotation3.subtitle=@"in the forest";
+	myAnnotation3.subtitle=@"CO";
 	
 	MyAnnotation* myAnnotation4=[[MyAnnotation alloc] init];
 	
 	myAnnotation4.coordinate=theCoordinate4;
 	myAnnotation4.title=@"Bolin Science Hall";
-	myAnnotation4.subtitle=@"at Russian Hill";
+	myAnnotation4.subtitle=@"BO";
     
     MyAnnotation* myAnnotation5=[[MyAnnotation alloc] init];
 	
 	myAnnotation5.coordinate=theCoordinate5;
-	myAnnotation5.title=@"Prothro Yeager";
-	myAnnotation5.subtitle=@"at Russian Hill";
+	myAnnotation5.title=@"Prothro Yeager Hall";
+	myAnnotation5.subtitle=@"PY";
     
     MyAnnotation* myAnnotation6=[[MyAnnotation alloc] init];
 	
 	myAnnotation6.coordinate=theCoordinate6;
 	myAnnotation6.title=@"Clark Student Center";
-	myAnnotation6.subtitle=@"at Russian Hill";
+	myAnnotation6.subtitle=@"CS";
     
     MyAnnotation* myAnnotation7=[[MyAnnotation alloc] init];
 	
 	myAnnotation7.coordinate=theCoordinate7;
 	myAnnotation7.title=@"Moffett Library";
-	myAnnotation7.subtitle=@"at Russian Hill";
+	myAnnotation7.subtitle=@"LI";
     
     MyAnnotation* myAnnotation8=[[MyAnnotation alloc] init];
 	
 	myAnnotation8.coordinate=theCoordinate8;
 	myAnnotation8.title=@"Hardin Administration Building";
-	myAnnotation8.subtitle=@"at Russian Hill";
+	myAnnotation8.subtitle=@"HA";
     
     MyAnnotation* myAnnotation9=[[MyAnnotation alloc] init];
     
 	myAnnotation9.coordinate=theCoordinate9;
 	myAnnotation9.title=@"Dillard College of Business Administration";
-	myAnnotation9.subtitle=@"in the city";
+	myAnnotation9.subtitle=@"DB";
 	
 	MyAnnotation* myAnnotation10=[[MyAnnotation alloc] init];
 	
 	myAnnotation10.coordinate=theCoordinate10;
 	myAnnotation10.title=@"Bridwell Hall";
-	myAnnotation10.subtitle=@"on a Bridge";
+	myAnnotation10.subtitle=@"BH";
 	
 	MyAnnotation* myAnnotation11=[[MyAnnotation alloc] init];
 	
 	myAnnotation11.coordinate=theCoordinate11;
 	myAnnotation11.title=@"Counseling Center";
-	myAnnotation11.subtitle=@"in the forest";
+	myAnnotation11.subtitle=@"CG";
 	
 	MyAnnotation* myAnnotation12=[[MyAnnotation alloc] init];
 	
 	myAnnotation12.coordinate=theCoordinate12;
 	myAnnotation12.title=@"University Police Department";
-	myAnnotation12.subtitle=@"at Russian Hill";
+	myAnnotation12.subtitle=@"PD";
     
     MyAnnotation* myAnnotation13=[[MyAnnotation alloc] init];
 	
 	myAnnotation13.coordinate=theCoordinate13;
 	myAnnotation13.title=@"McGaha Hall";
-	myAnnotation13.subtitle=@"at Russian Hill";
+	myAnnotation13.subtitle=@"MG";
     
     MyAnnotation* myAnnotation14=[[MyAnnotation alloc] init];
 	
 	myAnnotation14.coordinate=theCoordinate14;
 	myAnnotation14.title=@"Bridwell Apartments";
-	myAnnotation14.subtitle=@"at Russian Hill";
+	myAnnotation14.subtitle=@"";
     
     MyAnnotation* myAnnotation15=[[MyAnnotation alloc] init];
 	
 	myAnnotation15.coordinate=theCoordinate15;
 	myAnnotation15.title=@"Instrumental Music Hall";
-	myAnnotation15.subtitle=@"at Russian Hill";
+	myAnnotation15.subtitle=@"IM";
     
     MyAnnotation* myAnnotation16=[[MyAnnotation alloc] init];
 	
 	myAnnotation16.coordinate=theCoordinate16;
 	myAnnotation16.title=@"McCullough Hall";
-	myAnnotation16.subtitle=@"at Russian Hill";
+	myAnnotation16.subtitle=@"MC";
     
     MyAnnotation* myAnnotation17=[[MyAnnotation alloc] init];
     
 	myAnnotation17.coordinate=theCoordinate17;
 	myAnnotation17.title=@"Marchman Hall";
-	myAnnotation17.subtitle=@"in the city";
+	myAnnotation17.subtitle=@"MH";
 	
 	MyAnnotation* myAnnotation18=[[MyAnnotation alloc] init];
 	
 	myAnnotation18.coordinate=theCoordinate18;
 	myAnnotation18.title=@"McCullough-Trigg Hall";
-	myAnnotation18.subtitle=@"on a Bridge";
+	myAnnotation18.subtitle=@"MT";
 	
 	MyAnnotation* myAnnotation19=[[MyAnnotation alloc] init];
 	
 	myAnnotation19.coordinate=theCoordinate19;
 	myAnnotation19.title=@"Killingsworth Hall";
-	myAnnotation19.subtitle=@"in the forest";
+	myAnnotation19.subtitle=@"KH";
 	
 	MyAnnotation* myAnnotation20=[[MyAnnotation alloc] init];
 	
 	myAnnotation20.coordinate=theCoordinate20;
 	myAnnotation20.title=@"Pierce Hall";
-	myAnnotation20.subtitle=@"at Russian Hill";
+	myAnnotation20.subtitle=@"PH";
     
     MyAnnotation* myAnnotation21=[[MyAnnotation alloc] init];
 	
 	myAnnotation21.coordinate=theCoordinate21;
 	myAnnotation21.title=@"Fain Instrumental Music Hall";
-	myAnnotation21.subtitle=@"at Russian Hill";
+	myAnnotation21.subtitle=@"FM";
     
     MyAnnotation* myAnnotation22=[[MyAnnotation alloc] init];
 	
 	myAnnotation22.coordinate=theCoordinate22;
 	myAnnotation22.title=@"Fain Fine Arts Center";
-	myAnnotation22.subtitle=@"at Russian Hill";
+	myAnnotation22.subtitle=@"FA";
     
     MyAnnotation* myAnnotation23=[[MyAnnotation alloc] init];
 	
 	myAnnotation23.coordinate=theCoordinate23;
 	myAnnotation23.title=@"Instrumental Music Hall";
-	myAnnotation23.subtitle=@"at Russian Hill";
+	myAnnotation23.subtitle=@"COPY PASTE";
     
     MyAnnotation* myAnnotation24=[[MyAnnotation alloc] init];
 	
 	myAnnotation24.coordinate=theCoordinate24;
 	myAnnotation24.title=@"McCullough Hall";
-	myAnnotation24.subtitle=@"at Russian Hill";
+	myAnnotation24.subtitle=@"COPY PASTE!";
 
 	
 	[map addAnnotation:myAnnotation1];
