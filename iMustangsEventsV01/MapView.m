@@ -170,7 +170,7 @@
     CLLocationCoordinate2D theCoordinate22;
     theCoordinate22.latitude = 33.873375;
     theCoordinate22.longitude = -98.522966;
-    
+/*
     CLLocationCoordinate2D theCoordinate23;
     theCoordinate23.latitude = 33.876945;
     theCoordinate23.longitude = -98.52328;
@@ -178,7 +178,7 @@
     CLLocationCoordinate2D theCoordinate24;
     theCoordinate24.latitude = 33.874518;
     theCoordinate24.longitude = -98.523921;
-    
+*/
     CLLocationCoordinate2D theCoordinate25;
     theCoordinate25.latitude = 33.875548;
     theCoordinate25.longitude = -98.52317;
@@ -343,7 +343,7 @@
 	myAnnotation22.coordinate=theCoordinate22;
 	myAnnotation22.title=@"Fain Fine Arts Center";
 	myAnnotation22.subtitle=@"FA";
-    
+/*
     MyAnnotation* myAnnotation23=[[MyAnnotation alloc] init];
 	
 	myAnnotation23.coordinate=theCoordinate23;
@@ -355,7 +355,7 @@
 	myAnnotation24.coordinate=theCoordinate24;
 	myAnnotation24.title=@"McCullough Hall";
 	myAnnotation24.subtitle=@"COPY PASTE!";
-
+*/
     
     MyAnnotation* myAnnotation25=[[MyAnnotation alloc] init];
     
@@ -429,8 +429,10 @@
 	[map addAnnotation:myAnnotation20];
     [map addAnnotation:myAnnotation21];
 	[map addAnnotation:myAnnotation22];
+/*
 	[map addAnnotation:myAnnotation23];
 	[map addAnnotation:myAnnotation24];
+ */
     [map addAnnotation:myAnnotation25];
 	[map addAnnotation:myAnnotation26];
 	[map addAnnotation:myAnnotation27];
@@ -463,8 +465,10 @@
 	[annotations addObject:myAnnotation20];
     [annotations addObject:myAnnotation21];
 	[annotations addObject:myAnnotation22];
+/*
 	[annotations addObject:myAnnotation23];
 	[annotations addObject:myAnnotation24];
+*/
     [annotations addObject:myAnnotation25];
 	[annotations addObject:myAnnotation26];
 	[annotations addObject:myAnnotation27];
