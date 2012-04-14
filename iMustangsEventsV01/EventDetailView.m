@@ -41,8 +41,8 @@
         NSMutableArray *myAlarmsArray = [[NSMutableArray alloc] init];
         
         // Set the reminder alarms for the event.
-        EKAlarm *alarm1 = [EKAlarm alarmWithRelativeOffset:-3600]; // 1 Hour
-        EKAlarm *alarm2 = [EKAlarm alarmWithRelativeOffset:-86400]; // 1 Day    
+        EKAlarm *alarm1 = [EKAlarm alarmWithRelativeOffset:-86400]; // 1 Day 
+        EKAlarm *alarm2 = [EKAlarm alarmWithRelativeOffset:-3600];  // 1 Hour
         [myAlarmsArray addObject:alarm1];
         [myAlarmsArray addObject:alarm2];
         eventEK.alarms = myAlarmsArray;
