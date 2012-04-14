@@ -129,10 +129,6 @@
     [super viewDidLoad];
 	UINavigationBar *bar = [self.navigationController navigationBar];
     [bar setTintColor:[UIColor blackColor]];
-    
-    UIToolbar *tbar = [self.navigationController toolbar];
-    [tbar setTintColor:[UIColor blackColor]];
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
