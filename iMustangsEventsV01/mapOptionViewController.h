@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface mapOptionViewController : UIViewController
+@interface mapOptionViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>{
+    IBOutlet UIPickerView *pickerView;
+    NSArray *pickerViewArray;
+}
+
+@property (nonatomic, retain) NSArray *pickerViewArray;
+-(IBAction)selectedRow;
 
 @end

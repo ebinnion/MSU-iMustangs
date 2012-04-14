@@ -13,11 +13,13 @@
     
     IBOutlet MKMapView *map;
     NSMutableString *navFromView;
+    
 }
-
-
+@property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, strong) NSMutableString *navFromView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *mapOptionButton;
 - (IBAction)mapOptionButtonPressed:(id)sender;
+
+
 
 @end

@@ -12,12 +12,14 @@
 #import "mapOptionViewController.h"
 #import "CoreLocation/CoreLocation.h"
 #import "MyAnnotation.h"
+#import "ActionSheetPicker.h"
 
 
 @implementation MapView
 
 @synthesize navFromView;
 @synthesize mapOptionButton;
+@synthesize selectedIndex;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -381,31 +383,6 @@
 	myAnnotation28.title=@"Sikes Lake Center";
 	myAnnotation28.subtitle=@"at Russian Hill";
     
-/*
-    MyAnnotation* myAnnotation29=[[MyAnnotation alloc] init];
-	
-	myAnnotation29.coordinate=theCoordinate29;
-	myAnnotation29.title=@"Fain Instrumental Music Hall";
-	myAnnotation29.subtitle=@"at Russian Hill";
-    
-    MyAnnotation* myAnnotation30=[[MyAnnotation alloc] init];
-	
-	myAnnotation30.coordinate=theCoordinate30;
-	myAnnotation30.title=@"Fain Fine Arts Center";
-	myAnnotation30.subtitle=@"at Russian Hill";
-    
-    MyAnnotation* myAnnotation31=[[MyAnnotation alloc] init];
-	
-	myAnnotation31.coordinate=theCoordinate31;
-	myAnnotation31.title=@"Instrumental Music Hall";
-	myAnnotation31.subtitle=@"at Russian Hill";
-    
-    MyAnnotation* myAnnotation32=[[MyAnnotation alloc] init];
-	
-	myAnnotation32.coordinate=theCoordinate32;
-	myAnnotation32.title=@"McCullough Hall";
-	myAnnotation32.subtitle=@"at Russian Hill";
-*/
     
 	[map addAnnotation:myAnnotation1];
 	[map addAnnotation:myAnnotation2];
@@ -437,12 +414,7 @@
 	[map addAnnotation:myAnnotation26];
 	[map addAnnotation:myAnnotation27];
 	[map addAnnotation:myAnnotation28];
-/*
-    [map addAnnotation:myAnnotation29];
-	[map addAnnotation:myAnnotation30];
-	[map addAnnotation:myAnnotation31];
-	[map addAnnotation:myAnnotation32];
-*/
+
 	[annotations addObject:myAnnotation1];
 	[annotations addObject:myAnnotation2];
 	[annotations addObject:myAnnotation3];
@@ -473,14 +445,7 @@
 	[annotations addObject:myAnnotation26];
 	[annotations addObject:myAnnotation27];
 	[annotations addObject:myAnnotation28];
-/*
-    [annotations addObject:myAnnotation29];
-	[annotations addObject:myAnnotation30];
-	[annotations addObject:myAnnotation31];
-	[annotations addObject:myAnnotation32];
- */
 	
-
 }
 
 - (void)viewDidUnload

@@ -7,12 +7,14 @@
 //
 
 #import "mapOptionViewController.h"
+#import "MapView.h"
 
 @interface mapOptionViewController ()
 
 @end
 
 @implementation mapOptionViewController
+@synthesize pickerViewArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,14 +25,32 @@
     return self;
 }
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [pickerViewArray count];
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [self.pickerViewArray objectAtIndex:row];
+}
+
+-(IBAction)selectedRow {
+    int selectedIndex = [pickerView selectedRowInComponent:0];
+    NSLog(@"Selected Index = %i" ,selectedIndex );
+} 
+
 - (void)viewDidLoad
 {
+    NSArray *arrayToLoadPicker = [[NSArray alloc] initWithObjects:@"All",@"Bolin", nil];
+    self.pickerViewArray = arrayToLoadPicker;
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
