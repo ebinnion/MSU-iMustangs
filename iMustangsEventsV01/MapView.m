@@ -176,9 +176,42 @@
     theCoordinate23.longitude = -98.52328;
     
     CLLocationCoordinate2D theCoordinate24;
-    theCoordinate24.latitude = 33.876014;
-    theCoordinate24.longitude = -98.523234;
+    theCoordinate24.latitude = 33.874518;
+    theCoordinate24.longitude = -98.523921;
+    
+    CLLocationCoordinate2D theCoordinate25;
+    theCoordinate25.latitude = 33.875548;
+    theCoordinate25.longitude = -98.52317;
 	
+	CLLocationCoordinate2D theCoordinate26;
+    theCoordinate26.latitude = 33.871282;
+    theCoordinate26.longitude = -98.524253;
+	
+	CLLocationCoordinate2D theCoordinate27;
+    theCoordinate27.latitude = 33.868447;
+    theCoordinate27.longitude = -98.518959;
+
+	CLLocationCoordinate2D theCoordinate28;
+    theCoordinate28.latitude = 33.867539;
+    theCoordinate28.longitude = -98.522236;
+    
+    CLLocationCoordinate2D theCoordinate29;
+    theCoordinate29.latitude = 33.873685;
+    theCoordinate29.longitude = -98.522432;
+    
+    CLLocationCoordinate2D theCoordinate30;
+    theCoordinate30.latitude = 33.873375;
+    theCoordinate30.longitude = -98.522966;
+    
+    CLLocationCoordinate2D theCoordinate31;
+    theCoordinate31.latitude = 33.876945;
+    theCoordinate31.longitude = -98.52328;
+    
+    CLLocationCoordinate2D theCoordinate32;
+    theCoordinate32.latitude = 33.876014;
+    theCoordinate32.longitude = -98.523234;
+	
+    
 	MyAnnotation* myAnnotation1=[[MyAnnotation alloc] init];
     
 	myAnnotation1.coordinate=theCoordinate1;
@@ -323,7 +356,57 @@
 	myAnnotation24.title=@"McCullough Hall";
 	myAnnotation24.subtitle=@"COPY PASTE!";
 
+    
+    MyAnnotation* myAnnotation25=[[MyAnnotation alloc] init];
+    
+	myAnnotation25.coordinate=theCoordinate25;
+	myAnnotation25.title=@"Sunwatcher Village";
+	myAnnotation25.subtitle=@"in the city";
 	
+	MyAnnotation* myAnnotation26=[[MyAnnotation alloc] init];
+	
+	myAnnotation26.coordinate=theCoordinate26;
+	myAnnotation26.title=@"Sundance Court";
+	myAnnotation26.subtitle=@"on a Bridge";
+	
+	MyAnnotation* myAnnotation27=[[MyAnnotation alloc] init];
+	
+	myAnnotation27.coordinate=theCoordinate27;
+	myAnnotation27.title=@"Honors Program House";
+	myAnnotation27.subtitle=@"in the forest";
+	
+	MyAnnotation* myAnnotation28=[[MyAnnotation alloc] init];
+	
+	myAnnotation28.coordinate=theCoordinate28;
+	myAnnotation28.title=@"Sikes Lake Center";
+	myAnnotation28.subtitle=@"at Russian Hill";
+    
+/*
+    MyAnnotation* myAnnotation29=[[MyAnnotation alloc] init];
+	
+	myAnnotation29.coordinate=theCoordinate29;
+	myAnnotation29.title=@"Fain Instrumental Music Hall";
+	myAnnotation29.subtitle=@"at Russian Hill";
+    
+    MyAnnotation* myAnnotation30=[[MyAnnotation alloc] init];
+	
+	myAnnotation30.coordinate=theCoordinate30;
+	myAnnotation30.title=@"Fain Fine Arts Center";
+	myAnnotation30.subtitle=@"at Russian Hill";
+    
+    MyAnnotation* myAnnotation31=[[MyAnnotation alloc] init];
+	
+	myAnnotation31.coordinate=theCoordinate31;
+	myAnnotation31.title=@"Instrumental Music Hall";
+	myAnnotation31.subtitle=@"at Russian Hill";
+    
+    MyAnnotation* myAnnotation32=[[MyAnnotation alloc] init];
+	
+	myAnnotation32.coordinate=theCoordinate32;
+	myAnnotation32.title=@"McCullough Hall";
+	myAnnotation32.subtitle=@"at Russian Hill";
+*/
+    
 	[map addAnnotation:myAnnotation1];
 	[map addAnnotation:myAnnotation2];
 	[map addAnnotation:myAnnotation3];
@@ -348,7 +431,16 @@
 	[map addAnnotation:myAnnotation22];
 	[map addAnnotation:myAnnotation23];
 	[map addAnnotation:myAnnotation24];
-	
+    [map addAnnotation:myAnnotation25];
+	[map addAnnotation:myAnnotation26];
+	[map addAnnotation:myAnnotation27];
+	[map addAnnotation:myAnnotation28];
+/*
+    [map addAnnotation:myAnnotation29];
+	[map addAnnotation:myAnnotation30];
+	[map addAnnotation:myAnnotation31];
+	[map addAnnotation:myAnnotation32];
+*/
 	[annotations addObject:myAnnotation1];
 	[annotations addObject:myAnnotation2];
 	[annotations addObject:myAnnotation3];
@@ -373,6 +465,16 @@
 	[annotations addObject:myAnnotation22];
 	[annotations addObject:myAnnotation23];
 	[annotations addObject:myAnnotation24];
+    [annotations addObject:myAnnotation25];
+	[annotations addObject:myAnnotation26];
+	[annotations addObject:myAnnotation27];
+	[annotations addObject:myAnnotation28];
+/*
+    [annotations addObject:myAnnotation29];
+	[annotations addObject:myAnnotation30];
+	[annotations addObject:myAnnotation31];
+	[annotations addObject:myAnnotation32];
+ */
 	
 
 }
