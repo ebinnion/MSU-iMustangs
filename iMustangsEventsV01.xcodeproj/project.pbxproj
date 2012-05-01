@@ -43,6 +43,10 @@
 		D62996F715267D0300F715FE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62996F615267D0300F715FE /* MapKit.framework */; };
 		D62996FF1527A75B00F715FE /* FeatureReqView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62996FD1527A75B00F715FE /* FeatureReqView.m */; };
 		D62997001527A75B00F715FE /* FeatureReqView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62996FE1527A75B00F715FE /* FeatureReqView.xib */; };
+		D63613EE15509615004E8465 /* EventSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D63613EC15509615004E8465 /* EventSearchView.m */; };
+		D63613EF15509615004E8465 /* EventSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63613ED15509615004E8465 /* EventSearchView.xib */; };
+		D63613F31550966D004E8465 /* CustomTermSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = D63613F11550966D004E8465 /* CustomTermSearch.m */; };
+		D63613F41550966D004E8465 /* CustomTermSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63613F21550966D004E8465 /* CustomTermSearch.xib */; };
 		D6468E7114EAEF8B00560319 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6468E6F14EAEF8B00560319 /* SearchViewController.m */; };
 		D6D9A89114E53A61003A7345 /* EventListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D9A89014E53A61003A7345 /* EventListTable.m */; };
 		D6DFA68514E4CD0C00A7048D /* EventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DFA68314E4CD0C00A7048D /* EventDetailView.m */; };
@@ -112,6 +116,12 @@
 		D62996FC1527A75B00F715FE /* FeatureReqView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeatureReqView.h; sourceTree = "<group>"; };
 		D62996FD1527A75B00F715FE /* FeatureReqView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeatureReqView.m; sourceTree = "<group>"; };
 		D62996FE1527A75B00F715FE /* FeatureReqView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeatureReqView.xib; sourceTree = "<group>"; };
+		D63613EB15509615004E8465 /* EventSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSearchView.h; sourceTree = "<group>"; };
+		D63613EC15509615004E8465 /* EventSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSearchView.m; sourceTree = "<group>"; };
+		D63613ED15509615004E8465 /* EventSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSearchView.xib; sourceTree = "<group>"; };
+		D63613F01550966D004E8465 /* CustomTermSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTermSearch.h; sourceTree = "<group>"; };
+		D63613F11550966D004E8465 /* CustomTermSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTermSearch.m; sourceTree = "<group>"; };
+		D63613F21550966D004E8465 /* CustomTermSearch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTermSearch.xib; sourceTree = "<group>"; };
 		D6468E6E14EAEF8B00560319 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		D6468E6F14EAEF8B00560319 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D6D9A88F14E53A61003A7345 /* EventListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListTable.h; sourceTree = "<group>"; };
@@ -223,6 +233,8 @@
 				D6DFA68414E4CD0C00A7048D /* EventDetailView.xib */,
 				D62996F215267C9700F715FE /* MapView.xib */,
 				D62996FE1527A75B00F715FE /* FeatureReqView.xib */,
+				D63613ED15509615004E8465 /* EventSearchView.xib */,
+				D63613F21550966D004E8465 /* CustomTermSearch.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -257,6 +269,10 @@
 				7585D302152EB72C008258B3 /* developerViewController.m */,
 				7585D30A152EB822008258B3 /* mapOptionViewController.h */,
 				7585D30B152EB822008258B3 /* mapOptionViewController.m */,
+				D63613EB15509615004E8465 /* EventSearchView.h */,
+				D63613EC15509615004E8465 /* EventSearchView.m */,
+				D63613F01550966D004E8465 /* CustomTermSearch.h */,
+				D63613F11550966D004E8465 /* CustomTermSearch.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -345,7 +361,7 @@
 		D6EFD89414E0EFE200B944DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = D6EFD89714E0EFE200B944DA /* Build configuration list for PBXProject "iMustangsEventsV01" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -392,6 +408,8 @@
 				7585D30E152EB822008258B3 /* mapOptionViewController.xib in Resources */,
 				751F957A1537D4F4000FCC24 /* MustangsIcon1.png in Resources */,
 				751F957D1537D4F6000FCC24 /* MustangsIcon2.png in Resources */,
+				D63613EF15509615004E8465 /* EventSearchView.xib in Resources */,
+				D63613F41550966D004E8465 /* CustomTermSearch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +441,8 @@
 				7585D2FF152EB712008258B3 /* bandViewController.m in Sources */,
 				7585D304152EB72C008258B3 /* developerViewController.m in Sources */,
 				7585D30D152EB822008258B3 /* mapOptionViewController.m in Sources */,
+				D63613EE15509615004E8465 /* EventSearchView.m in Sources */,
+				D63613F31550966D004E8465 /* CustomTermSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
