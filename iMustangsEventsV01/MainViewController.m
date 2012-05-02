@@ -13,6 +13,7 @@
 #import "FeatureReqView.h"
 #import "bandViewController.h"
 #import "developerViewController.h"
+#import "EventSearchView.h"
 
 // this framework was imported so we could use the kCFURLErrorNotConnectedToInternet error code
 #import <CFNetwork/CFNetwork.h>
@@ -216,9 +217,11 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     self.eventFeedConnection = nil;
     
+    /*
     // Print rss source to console.
     NSString *dataString = [[NSString alloc] initWithData:eventData encoding:NSUTF8StringEncoding];
     NSLog(@"%@", dataString);
+     */
     
     self.currentParseBatch = [NSMutableArray array];
     self.currentParsedCharacterData = [NSMutableString string];
@@ -239,10 +242,18 @@
     [loadingEventDataLabel setHidden:YES];
     [loadingEventDataButton setHidden:YES];
     
-    EventListTable *eventsListView = [[EventListTable alloc] initWithStyle:UITableViewStylePlain];
-    eventsListView.navFromView = [NSMutableString string];
-    [eventsListView.navFromView setString:@"MainViewController"];
-    [self.navigationController pushViewController:eventsListView animated:YES];
+    // Code to go directly to EventListTable without filtering.
+    /*
+     EventListTable *eventsListView = [[EventListTable alloc] initWithStyle:UITableViewStylePlain];
+     eventsListView.navFromView = [NSMutableString string];
+     [eventsListView.navFromView setString:@"MainViewController"];
+     [self.navigationController pushViewController:eventsListView animated:YES];
+     */
+    
+    EventSearchView *eventSearchView = [[EventSearchView alloc] initWithNibName:@"EventSearchView" bundle:nil];
+    eventSearchView.navFromView = [NSMutableString string];
+    [eventSearchView.navFromView setString:@"MainViewController"];
+    [self.navigationController pushViewController:eventSearchView animated:YES];
 }
 
 
@@ -337,10 +348,6 @@ static NSString * const kLocalEndDateElementName = @"s:localenddate";
             // Save to database.
             NSString *tempTitle = [[NSString alloc] initWithString:currentEventTitle];
             [eventManOb setTitle:tempTitle];
-            
-            // Test Code...
-            NSLog(@"%@", @"Are we ever here?");
-            NSLog(@"%@%@", @"title: ", tempTitle);
             
             NSString *tempDescript = [[NSString alloc] initWithString:currentEventDescript];
             [eventManOb setDescript:tempDescript];
@@ -502,9 +509,6 @@ static NSString * const kLocalEndDateElementName = @"s:localenddate";
         // If the current element is one whose content we care about, append 'string' to the property that holds the content of the current element.
         [self.currentParsedCharacterData appendString:string];
     }
-    
-    // Test code...
-    //NSLog(@"the parser just found this text in a tag:%@",string);
 }
 
 

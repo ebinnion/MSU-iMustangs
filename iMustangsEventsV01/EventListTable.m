@@ -14,6 +14,8 @@
 @implementation EventListTable
 
 @synthesize navFromView;
+@synthesize eventTypeFilter;
+@synthesize eventLocationFilter;
 
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
@@ -36,11 +38,102 @@
     // Set fetch predicate to exclude events that have already occured.
     NSDate *today = [NSDate date];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(localStartDate >= %@)", today];
-    [request setPredicate:predicate];
-        
-    // Test predicate. Not needed in final.
-    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(calendarFlag == 0)"];
+    if ([eventLocationFilter isEqualToString:@"All"]) {
+        if ([eventTypeFilter isEqualToString:@"All"]) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(localStartDate >= %@)", today];
+            [NSFetchedResultsController deleteCacheWithName:nil];
+            [request setPredicate:predicate];
+        } else {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY title CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, today];
+            [NSFetchedResultsController deleteCacheWithName:nil];
+            [request setPredicate:predicate];
+            
+            NSError *error1 = nil;
+            NSUInteger count = [managedObjectContext countForFetchRequest:request error:&error1];
+            
+            if (count < 1) {
+                UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"No Matching Events Found" 
+                                                                   message:nil
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Back"
+                                                         otherButtonTitles:nil];
+                
+                [addAlert show];
+            }
+        }
+    } else if ([eventLocationFilter isEqualToString:@"Home"]) {
+        if ([eventTypeFilter isEqualToString:@"All"]) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", @"Wichita Falls", today];
+            [NSFetchedResultsController deleteCacheWithName:nil];
+            [request setPredicate:predicate];
+            
+            NSError *error1 = nil;
+            NSUInteger count = [managedObjectContext countForFetchRequest:request error:&error1];
+            
+            if (count < 1) {
+                UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"No Matching Events Found" 
+                                                                   message:nil
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Back"
+                                                         otherButtonTitles:nil];
+                
+                [addAlert show];
+            }
+        } else {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY title CONTAINS[c] %@ AND ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, @"Wichita Falls", today];
+            [NSFetchedResultsController deleteCacheWithName:nil];
+            [request setPredicate:predicate];
+            
+            NSError *error1 = nil;
+            NSUInteger count = [managedObjectContext countForFetchRequest:request error:&error1];
+            
+            if (count < 1) {
+                UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"No Matching Events Found" 
+                                                                   message:nil
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Back"
+                                                         otherButtonTitles:nil];
+                
+                [addAlert show];
+            }
+        }
+    } else if ([eventLocationFilter isEqualToString:@"Away"]) {
+        if ([eventTypeFilter isEqualToString:@"All"]) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"not ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", @"Wichita Falls", today];
+            [NSFetchedResultsController deleteCacheWithName:nil];
+            [request setPredicate:predicate];
+            
+            NSError *error1 = nil;
+            NSUInteger count = [managedObjectContext countForFetchRequest:request error:&error1];
+            
+            if (count < 1) {
+                UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"No Matching Events Found" 
+                                                                   message:nil
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Back"
+                                                         otherButtonTitles:nil];
+                
+                [addAlert show];
+            }
+        } else {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY title CONTAINS[c] %@ AND not ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, @"Wichita Falls", today];
+            [NSFetchedResultsController deleteCacheWithName:nil];
+            [request setPredicate:predicate];
+            
+            NSError *error1 = nil;
+            NSUInteger count = [managedObjectContext countForFetchRequest:request error:&error1];
+            
+            if (count < 1) {
+                UIAlertView *addAlert = [[UIAlertView alloc] initWithTitle:@"No Matching Events Found" 
+                                                                   message:nil
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Back"
+                                                         otherButtonTitles:nil];
+                
+                [addAlert show];
+            }
+        }
+    }
     
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"localStartDate" ascending:YES];
     [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
@@ -249,6 +342,18 @@
     eventDetailVC.eventEDV = [self.resultsController objectAtIndexPath:indexPath];
     
     [self presentModalViewController:eventDetailVC animated:YES];
+}
+
+#pragma mark - UIAlertView delegate methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if([title isEqualToString:@"Back"])
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end
