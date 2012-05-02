@@ -15,6 +15,7 @@
 
 @implementation mapOptionViewController
 @synthesize pickerViewArray;
+@synthesize passedMapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,13 +32,18 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return [pickerViewArray count];
 }
+#pragma mark -
+#pragma mark Picker Delegate Protocol
+
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [self.pickerViewArray objectAtIndex:row];
 }
 
 -(IBAction)selectedRow {
     int selectedIndex = [pickerView selectedRowInComponent:0];
-    NSLog(@"Selected Index = %i" ,selectedIndex );
+    passedMapView.selectedIndex = selectedIndex;
+    //NSLog(@"Selected Index = %i" ,selectedIndex );
+    [self dismissModalViewControllerAnimated:YES];
 } 
 
 - (void)viewDidLoad

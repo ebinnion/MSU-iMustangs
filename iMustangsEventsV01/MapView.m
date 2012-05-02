@@ -67,6 +67,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    NSLog(@"viewDidAppear");
+    NSLog(@"Selected index is: %i", selectedIndex); 
     NSString *tileDirectory = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles"];
     TileOverlay *overlay = [[TileOverlay alloc] initWithTileDirectory:tileDirectory];
     
@@ -464,7 +466,8 @@
 
 - (IBAction)mapOptionButtonPressed:(id)sender {
     mapOptionViewController *mapOptions = [[mapOptionViewController alloc] initWithNibName:@"mapOptionViewController" bundle:nil];
-    mapOptions.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    mapOptions.passedMapView = self;
+    mapOptions.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:mapOptions animated:YES];
     
 }
