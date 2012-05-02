@@ -13,6 +13,7 @@
     
     IBOutlet MKMapView *map;
     NSMutableString *navFromView;
+    NSInteger selectedIndex;
     
 }
 @property (nonatomic, assign) NSInteger selectedIndex;
