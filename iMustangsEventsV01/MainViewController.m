@@ -14,6 +14,7 @@
 #import "bandViewController.h"
 #import "developerViewController.h"
 #import "EventSearchView.h"
+#import "photosViewController.h"
 
 // this framework was imported so we could use the kCFURLErrorNotConnectedToInternet error code
 #import <CFNetwork/CFNetwork.h>
@@ -115,6 +116,10 @@
     [self.navigationController pushViewController:developerView animated:YES];
 }
 
+- (IBAction)photosButtonPressed:(id)sender {
+    photosViewController *photosView = [[photosViewController alloc] initWithNibName:@"photosViewController" bundle:nil];
+    [self.navigationController pushViewController:photosView animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning

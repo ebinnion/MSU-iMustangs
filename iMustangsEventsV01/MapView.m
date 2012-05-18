@@ -12,7 +12,7 @@
 #import "mapOptionViewController.h"
 #import "CoreLocation/CoreLocation.h"
 #import "MyAnnotation.h"
-#import "ActionSheetPicker.h"
+
 
 
 @implementation MapView
@@ -63,8 +63,18 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillAppear:animated];
+    
+    
 }
 
+
+
+- (void) viewDidLoad
+{
+    selectedIndex = 0;
+    
+	
+}
 -(void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"viewDidAppear");
@@ -73,21 +83,9 @@
     TileOverlay *overlay = [[TileOverlay alloc] initWithTileDirectory:tileDirectory];
     
     [map addOverlay:overlay];
-}
-
-- (void) viewDidLoad
-{
-    CLLocation *userLoc = map.userLocation.location;
-    CLLocationCoordinate2D userCoordinate = userLoc.coordinate;
-	
-	NSLog(@"user latitude = %f",userCoordinate.latitude);
-	NSLog(@"user longitude = %f",userCoordinate.longitude);
-	
-	map.delegate=self;
-	
-	NSMutableArray* annotations=[[NSMutableArray alloc] init];
-	
-	CLLocationCoordinate2D theCoordinate1;
+    
+    
+    CLLocationCoordinate2D theCoordinate1;
     theCoordinate1.latitude = 33.869764;
     theCoordinate1.longitude = -98.523454;
 	
@@ -174,15 +172,15 @@
     CLLocationCoordinate2D theCoordinate22;
     theCoordinate22.latitude = 33.873375;
     theCoordinate22.longitude = -98.522966;
-/*
-    CLLocationCoordinate2D theCoordinate23;
-    theCoordinate23.latitude = 33.876945;
-    theCoordinate23.longitude = -98.52328;
-    
-    CLLocationCoordinate2D theCoordinate24;
-    theCoordinate24.latitude = 33.874518;
-    theCoordinate24.longitude = -98.523921;
-*/
+    /*
+     CLLocationCoordinate2D theCoordinate23;
+     theCoordinate23.latitude = 33.876945;
+     theCoordinate23.longitude = -98.52328;
+     
+     CLLocationCoordinate2D theCoordinate24;
+     theCoordinate24.latitude = 33.874518;
+     theCoordinate24.longitude = -98.523921;
+     */
     CLLocationCoordinate2D theCoordinate25;
     theCoordinate25.latitude = 33.875548;
     theCoordinate25.longitude = -98.52317;
@@ -194,7 +192,7 @@
 	CLLocationCoordinate2D theCoordinate27;
     theCoordinate27.latitude = 33.868447;
     theCoordinate27.longitude = -98.518959;
-
+    
 	CLLocationCoordinate2D theCoordinate28;
     theCoordinate28.latitude = 33.867539;
     theCoordinate28.longitude = -98.522236;
@@ -347,19 +345,19 @@
 	myAnnotation22.coordinate=theCoordinate22;
 	myAnnotation22.title=@"Fain Fine Arts Center";
 	myAnnotation22.subtitle=@"FA";
-/*
-    MyAnnotation* myAnnotation23=[[MyAnnotation alloc] init];
-	
-	myAnnotation23.coordinate=theCoordinate23;
-	myAnnotation23.title=@"Instrumental Music Hall";
-	myAnnotation23.subtitle=@"COPY PASTE";
-    
-    MyAnnotation* myAnnotation24=[[MyAnnotation alloc] init];
-	
-	myAnnotation24.coordinate=theCoordinate24;
-	myAnnotation24.title=@"McCullough Hall";
-	myAnnotation24.subtitle=@"COPY PASTE!";
-*/
+    /*
+     MyAnnotation* myAnnotation23=[[MyAnnotation alloc] init];
+     
+     myAnnotation23.coordinate=theCoordinate23;
+     myAnnotation23.title=@"Instrumental Music Hall";
+     myAnnotation23.subtitle=@"COPY PASTE";
+     
+     MyAnnotation* myAnnotation24=[[MyAnnotation alloc] init];
+     
+     myAnnotation24.coordinate=theCoordinate24;
+     myAnnotation24.title=@"McCullough Hall";
+     myAnnotation24.subtitle=@"COPY PASTE!";
+     */
     
     MyAnnotation* myAnnotation25=[[MyAnnotation alloc] init];
     
@@ -385,69 +383,95 @@
 	myAnnotation28.title=@"Sikes Lake Center";
 	myAnnotation28.subtitle=@"at Russian Hill";
     
+    [map removeAnnotation:myAnnotation1];
+	[map removeAnnotation:myAnnotation2];
+	[map removeAnnotation:myAnnotation3];
+	[map removeAnnotation:myAnnotation4];
+    [map removeAnnotation:myAnnotation5];
+	[map removeAnnotation:myAnnotation6];
+	[map removeAnnotation:myAnnotation7];
+	[map removeAnnotation:myAnnotation8];
+    [map removeAnnotation:myAnnotation9];
+	[map removeAnnotation:myAnnotation10];
+	[map removeAnnotation:myAnnotation11];
+	[map removeAnnotation:myAnnotation12];
+    [map removeAnnotation:myAnnotation13];
+	[map removeAnnotation:myAnnotation14];
+	[map removeAnnotation:myAnnotation15];
+	[map removeAnnotation:myAnnotation16];
+    [map removeAnnotation:myAnnotation17];
+	[map removeAnnotation:myAnnotation18];
+	[map removeAnnotation:myAnnotation19];
+	[map removeAnnotation:myAnnotation20];
+    [map removeAnnotation:myAnnotation21];
+	[map removeAnnotation:myAnnotation22];
+    /*
+     [map addAnnotation:myAnnotation23];
+     [map addAnnotation:myAnnotation24];
+     */
+    [map removeAnnotation:myAnnotation25];
+	[map removeAnnotation:myAnnotation26];
+	[map removeAnnotation:myAnnotation27];
+	[map removeAnnotation:myAnnotation28];
     
-	[map addAnnotation:myAnnotation1];
-	[map addAnnotation:myAnnotation2];
-	[map addAnnotation:myAnnotation3];
-	[map addAnnotation:myAnnotation4];
-    [map addAnnotation:myAnnotation5];
-	[map addAnnotation:myAnnotation6];
-	[map addAnnotation:myAnnotation7];
-	[map addAnnotation:myAnnotation8];
-    [map addAnnotation:myAnnotation9];
-	[map addAnnotation:myAnnotation10];
-	[map addAnnotation:myAnnotation11];
-	[map addAnnotation:myAnnotation12];
-    [map addAnnotation:myAnnotation13];
-	[map addAnnotation:myAnnotation14];
-	[map addAnnotation:myAnnotation15];
-	[map addAnnotation:myAnnotation16];
-    [map addAnnotation:myAnnotation17];
-	[map addAnnotation:myAnnotation18];
-	[map addAnnotation:myAnnotation19];
-	[map addAnnotation:myAnnotation20];
-    [map addAnnotation:myAnnotation21];
-	[map addAnnotation:myAnnotation22];
-/*
-	[map addAnnotation:myAnnotation23];
-	[map addAnnotation:myAnnotation24];
- */
-    [map addAnnotation:myAnnotation25];
-	[map addAnnotation:myAnnotation26];
-	[map addAnnotation:myAnnotation27];
-	[map addAnnotation:myAnnotation28];
-
-	[annotations addObject:myAnnotation1];
-	[annotations addObject:myAnnotation2];
-	[annotations addObject:myAnnotation3];
-	[annotations addObject:myAnnotation4];
-    [annotations addObject:myAnnotation5];
-	[annotations addObject:myAnnotation6];
-	[annotations addObject:myAnnotation7];
-	[annotations addObject:myAnnotation8];
-    [annotations addObject:myAnnotation9];
-	[annotations addObject:myAnnotation10];
-	[annotations addObject:myAnnotation11];
-	[annotations addObject:myAnnotation12];
-    [annotations addObject:myAnnotation13];
-	[annotations addObject:myAnnotation14];
-	[annotations addObject:myAnnotation15];
-	[annotations addObject:myAnnotation16];
-    [annotations addObject:myAnnotation17];
-	[annotations addObject:myAnnotation18];
-	[annotations addObject:myAnnotation19];
-	[annotations addObject:myAnnotation20];
-    [annotations addObject:myAnnotation21];
-	[annotations addObject:myAnnotation22];
-/*
-	[annotations addObject:myAnnotation23];
-	[annotations addObject:myAnnotation24];
-*/
-    [annotations addObject:myAnnotation25];
-	[annotations addObject:myAnnotation26];
-	[annotations addObject:myAnnotation27];
-	[annotations addObject:myAnnotation28];
+    
+    switch (selectedIndex) {
+        case 0:
+            NSLog(@"case 0");
+            [map addAnnotation:myAnnotation1];
+            [map addAnnotation:myAnnotation2];
+            [map addAnnotation:myAnnotation3];
+            [map addAnnotation:myAnnotation4];
+            [map addAnnotation:myAnnotation5];
+            [map addAnnotation:myAnnotation6];
+            [map addAnnotation:myAnnotation7];
+            [map addAnnotation:myAnnotation8];
+            [map addAnnotation:myAnnotation9];
+            [map addAnnotation:myAnnotation10];
+            [map addAnnotation:myAnnotation11];
+            [map addAnnotation:myAnnotation12];
+            [map addAnnotation:myAnnotation13];
+            [map addAnnotation:myAnnotation14];
+            [map addAnnotation:myAnnotation15];
+            [map addAnnotation:myAnnotation16];
+            [map addAnnotation:myAnnotation17];
+            [map addAnnotation:myAnnotation18];
+            [map addAnnotation:myAnnotation19];
+            [map addAnnotation:myAnnotation20];
+            [map addAnnotation:myAnnotation21];
+            [map addAnnotation:myAnnotation22];
+            /*
+             [map addAnnotation:myAnnotation23];
+             [map addAnnotation:myAnnotation24];
+             */
+            [map addAnnotation:myAnnotation25];
+            [map addAnnotation:myAnnotation26];
+            [map addAnnotation:myAnnotation27];
+            [map addAnnotation:myAnnotation28];
+            break;
+            
+        case 1:
+            NSLog(@"case 1");
+            [map addAnnotation:myAnnotation1];
+            break;
+        case 2:
+            [map addAnnotation:myAnnotation2];
+            break;
+        case 3:
+            [map addAnnotation:myAnnotation3];
+            break;
+        case 4:
+            [map addAnnotation:myAnnotation4];
+            break;
+        case 5:
+            [map addAnnotation:myAnnotation5];
+            break;
+        default:
+            break;
+    }
 	
+    
+
 }
 
 - (void)viewDidUnload

@@ -48,7 +48,7 @@
 
 - (void)viewDidLoad
 {
-    NSArray *arrayToLoadPicker = [[NSArray alloc] initWithObjects:@"All",@"Bolin", nil];
+    NSArray *arrayToLoadPicker = [[NSArray alloc] initWithObjects:@"All",@"Wellness Center",@"President's House", nil];
     self.pickerViewArray = arrayToLoadPicker;
     
     [super viewDidLoad];
