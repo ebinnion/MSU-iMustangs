@@ -54,5 +54,6 @@
 - (IBAction)featureReqPressed:(id)sender;
 - (IBAction)bandButtonPressed:(id)sender;
 - (IBAction)developerButtonPressed:(id)sender;
+-(IBAction)photosButtonPressed:(id)sender;
 
 @end

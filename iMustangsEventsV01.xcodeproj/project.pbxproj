@@ -25,11 +25,9 @@
 		7526D3591527F574006B8CA6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7526D3581527F574006B8CA6 /* QuartzCore.framework */; };
 		7526D35A1527F698006B8CA6 /* TileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526D3551527F407006B8CA6 /* TileOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7526D35B1527F698006B8CA6 /* TileOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7526D3571527F407006B8CA6 /* TileOverlayView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		754046E71538FDFE002C4008 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 754046DE1538FDD7002C4008 /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		754046E81538FDFE002C4008 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 754046E01538FDD7002C4008 /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		754046E91538FDFE002C4008 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 754046E21538FDD7002C4008 /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		754046EA1538FDFE002C4008 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 754046E41538FDD7002C4008 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		754046EB1538FDFE002C4008 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 754046E61538FDD7002C4008 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		75529E2B1565F58600C35F37 /* 86-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75529E2A1565F58600C35F37 /* 86-camera@2x.png */; };
+		75529E5B1566028600C35F37 /* photosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75529E591566028500C35F37 /* photosViewController.m */; };
+		75529E5C1566028600C35F37 /* photosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75529E5A1566028600C35F37 /* photosViewController.xib */; };
 		7585D2FF152EB712008258B3 /* bandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585D2FD152EB712008258B3 /* bandViewController.m */; };
 		7585D300152EB712008258B3 /* bandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585D2FE152EB712008258B3 /* bandViewController.xib */; };
 		7585D304152EB72C008258B3 /* developerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585D302152EB72C008258B3 /* developerViewController.m */; };
@@ -60,7 +58,7 @@
 		D6EFD8B014E0EFE200B944DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EFD8AF14E0EFE200B944DA /* main.m */; };
 		D6EFD8B414E0EFE200B944DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EFD8B314E0EFE200B944DA /* AppDelegate.m */; };
 		D6EFD8B714E0EFE200B944DA /* iMustangsEventsV01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EFD8B514E0EFE200B944DA /* iMustangsEventsV01.xcdatamodeld */; };
-		D6EFD8BA14E0EFE200B944DA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EFD8B914E0EFE200B944DA /* MainViewController.m */; };
+		D6EFD8BA14E0EFE200B944DA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EFD8B914E0EFE200B944DA /* MainViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6EFD8C014E0EFE200B944DA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6EFD8BE14E0EFE200B944DA /* MainViewController.xib */; };
 		D6EFD8CF14E105F100B944DA /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EFD8CE14E105F100B944DA /* Event.m */; };
 /* End PBXBuildFile section */
@@ -86,17 +84,10 @@
 		7526D3561527F407006B8CA6 /* TileOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileOverlayView.h; sourceTree = "<group>"; };
 		7526D3571527F407006B8CA6 /* TileOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileOverlayView.m; sourceTree = "<group>"; };
 		7526D3581527F574006B8CA6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		754046DB1538FDBE002C4008 /* ActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
-		754046DD1538FDD7002C4008 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
-		754046DE1538FDD7002C4008 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		754046DF1538FDD7002C4008 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		754046E01538FDD7002C4008 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		754046E11538FDD7002C4008 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
-		754046E21538FDD7002C4008 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		754046E31538FDD7002C4008 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		754046E41538FDD7002C4008 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		754046E51538FDD7002C4008 /* DistancePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
-		754046E61538FDD7002C4008 /* DistancePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		75529E2A1565F58600C35F37 /* 86-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera@2x.png"; sourceTree = "<group>"; };
+		75529E581566028500C35F37 /* photosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photosViewController.h; sourceTree = "<group>"; };
+		75529E591566028500C35F37 /* photosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photosViewController.m; sourceTree = "<group>"; };
+		75529E5A1566028600C35F37 /* photosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = photosViewController.xib; sourceTree = "<group>"; };
 		7585D2FC152EB712008258B3 /* bandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bandViewController.h; sourceTree = "<group>"; };
 		7585D2FD152EB712008258B3 /* bandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bandViewController.m; sourceTree = "<group>"; };
 		7585D2FE152EB712008258B3 /* bandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bandViewController.xib; sourceTree = "<group>"; };
@@ -174,6 +165,7 @@
 				7526D33C1527F3B2006B8CA6 /* 112-group@2x.png */,
 				7526D33D1527F3B2006B8CA6 /* navBg@2x.png */,
 				7526D33B1527F3B2006B8CA6 /* iMustangsHomeBG.jpg */,
+				75529E2A1565F58600C35F37 /* 86-camera@2x.png */,
 				7526D33E1527F3B2006B8CA6 /* backButton@2x.png */,
 				7526D33F1527F3B2006B8CA6 /* buttonBg@2x.png */,
 				7526D3401527F3B2006B8CA6 /* MustangsIconLarge.png */,
@@ -185,32 +177,6 @@
 				7526D3461527F3B2006B8CA6 /* 08-chatWhite@2x.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		754046DA1538FDAD002C4008 /* ActionSheetPicker */ = {
-			isa = PBXGroup;
-			children = (
-				754046DB1538FDBE002C4008 /* ActionSheetPicker.h */,
-				754046DC1538FDC2002C4008 /* Pickers */,
-			);
-			name = ActionSheetPicker;
-			sourceTree = "<group>";
-		};
-		754046DC1538FDC2002C4008 /* Pickers */ = {
-			isa = PBXGroup;
-			children = (
-				754046DD1538FDD7002C4008 /* AbstractActionSheetPicker.h */,
-				754046DE1538FDD7002C4008 /* AbstractActionSheetPicker.m */,
-				754046DF1538FDD7002C4008 /* ActionSheetStringPicker.h */,
-				754046E01538FDD7002C4008 /* ActionSheetStringPicker.m */,
-				754046E11538FDD7002C4008 /* ActionSheetDatePicker.h */,
-				754046E21538FDD7002C4008 /* ActionSheetDatePicker.m */,
-				754046E31538FDD7002C4008 /* ActionSheetDistancePicker.h */,
-				754046E41538FDD7002C4008 /* ActionSheetDistancePicker.m */,
-				754046E51538FDD7002C4008 /* DistancePickerView.h */,
-				754046E61538FDD7002C4008 /* DistancePickerView.m */,
-			);
-			name = Pickers;
 			sourceTree = "<group>";
 		};
 		D65DE3AB14E65ABA007A4352 /* Model */ = {
@@ -233,6 +199,7 @@
 				D6DFA68414E4CD0C00A7048D /* EventDetailView.xib */,
 				D62996F215267C9700F715FE /* MapView.xib */,
 				D62996FE1527A75B00F715FE /* FeatureReqView.xib */,
+				75529E5A1566028600C35F37 /* photosViewController.xib */,
 				D63613ED15509615004E8465 /* EventSearchView.xib */,
 				D63613F21550966D004E8465 /* CustomTermSearch.xib */,
 			);
@@ -244,7 +211,6 @@
 			children = (
 				D6EFD8B214E0EFE200B944DA /* AppDelegate.h */,
 				D6EFD8B314E0EFE200B944DA /* AppDelegate.m */,
-				754046DA1538FDAD002C4008 /* ActionSheetPicker */,
 				D6EFD8B814E0EFE200B944DA /* MainViewController.h */,
 				D6EFD8B914E0EFE200B944DA /* MainViewController.m */,
 				D6D9A88F14E53A61003A7345 /* EventListTable.h */,
@@ -253,6 +219,8 @@
 				7526D3551527F407006B8CA6 /* TileOverlay.m */,
 				7526D3561527F407006B8CA6 /* TileOverlayView.h */,
 				7526D3571527F407006B8CA6 /* TileOverlayView.m */,
+				75529E581566028500C35F37 /* photosViewController.h */,
+				75529E591566028500C35F37 /* photosViewController.m */,
 				D6DFA68214E4CD0C00A7048D /* EventDetailView.h */,
 				D6DFA68314E4CD0C00A7048D /* EventDetailView.m */,
 				75A310C2153035BD00CC6ACB /* MyAnnotation.h */,
@@ -410,6 +378,8 @@
 				751F957D1537D4F6000FCC24 /* MustangsIcon2.png in Resources */,
 				D63613EF15509615004E8465 /* EventSearchView.xib in Resources */,
 				D63613F41550966D004E8465 /* CustomTermSearch.xib in Resources */,
+				75529E2B1565F58600C35F37 /* 86-camera@2x.png in Resources */,
+				75529E5C1566028600C35F37 /* photosViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				754046E71538FDFE002C4008 /* AbstractActionSheetPicker.m in Sources */,
-				754046E81538FDFE002C4008 /* ActionSheetStringPicker.m in Sources */,
-				754046E91538FDFE002C4008 /* ActionSheetDatePicker.m in Sources */,
-				754046EA1538FDFE002C4008 /* ActionSheetDistancePicker.m in Sources */,
-				754046EB1538FDFE002C4008 /* DistancePickerView.m in Sources */,
 				75A310C41530384D00CC6ACB /* MyAnnotation.m in Sources */,
 				7526D35A1527F698006B8CA6 /* TileOverlay.m in Sources */,
 				7526D35B1527F698006B8CA6 /* TileOverlayView.m in Sources */,
@@ -443,6 +408,7 @@
 				7585D30D152EB822008258B3 /* mapOptionViewController.m in Sources */,
 				D63613EE15509615004E8465 /* EventSearchView.m in Sources */,
 				D63613F31550966D004E8465 /* CustomTermSearch.m in Sources */,
+				75529E5B1566028600C35F37 /* photosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
