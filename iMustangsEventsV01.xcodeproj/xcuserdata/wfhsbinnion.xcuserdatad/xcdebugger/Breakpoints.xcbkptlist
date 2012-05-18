@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iMustangsEventsV01/MapView.m"
-         timestampString = "356067832.896026"
+         timestampString = "359002577.722674"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "466"
-         endingLineNumber = "466"
+         startingLineNumber = "496"
+         endingLineNumber = "496"
          landmarkName = "-mapOptionButtonPressed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,13 +60,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "iMustangsEventsV01/MapView.m"
-         timestampString = "356067832.896026"
+         timestampString = "359002577.722674"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
+         startingLineNumber = "71"
+         endingLineNumber = "71"
+         landmarkName = "@implementation MapView"
+         landmarkType = "3">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
