@@ -329,7 +329,7 @@
 		D6EFD89414E0EFE200B944DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = D6EFD89714E0EFE200B944DA /* Build configuration list for PBXProject "iMustangsEventsV01" */;
 			compatibilityVersion = "Xcode 3.2";

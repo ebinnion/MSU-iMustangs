@@ -61,6 +61,7 @@
         
         // Save the change to the database.
         NSError *error2 = nil;
+        
         if (![managedObjectContextEDV save:&error2]) {
             // Handle the error.
             NSLog(@"%@", @"ManagedObjectContext save error in addEventToCalendar - EventDetailView.m.");

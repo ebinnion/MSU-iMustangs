@@ -44,7 +44,7 @@
             [NSFetchedResultsController deleteCacheWithName:nil];
             [request setPredicate:predicate];
         } else {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY title CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, today];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, today];
             [NSFetchedResultsController deleteCacheWithName:nil];
             [request setPredicate:predicate];
             
@@ -63,7 +63,7 @@
         }
     } else if ([eventLocationFilter isEqualToString:@"Home"]) {
         if ([eventTypeFilter isEqualToString:@"All"]) {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", @"Wichita Falls", today];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"location CONTAINS[c] %@ AND (localStartDate >= %@)", @"Wichita Falls", today];
             [NSFetchedResultsController deleteCacheWithName:nil];
             [request setPredicate:predicate];
             
@@ -80,7 +80,7 @@
                 [addAlert show];
             }
         } else {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY title CONTAINS[c] %@ AND ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, @"Wichita Falls", today];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[c] %@ AND location CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, @"Wichita Falls", today];
             [NSFetchedResultsController deleteCacheWithName:nil];
             [request setPredicate:predicate];
             
@@ -99,7 +99,7 @@
         }
     } else if ([eventLocationFilter isEqualToString:@"Away"]) {
         if ([eventTypeFilter isEqualToString:@"All"]) {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"not ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", @"Wichita Falls", today];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"not location CONTAINS[c] %@ AND (localStartDate >= %@)", @"Wichita Falls", today];
             [NSFetchedResultsController deleteCacheWithName:nil];
             [request setPredicate:predicate];
             
@@ -116,7 +116,7 @@
                 [addAlert show];
             }
         } else {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY title CONTAINS[c] %@ AND not ANY location CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, @"Wichita Falls", today];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[c] %@ AND not location CONTAINS[c] %@ AND (localStartDate >= %@)", eventTypeFilter, @"Wichita Falls", today];
             [NSFetchedResultsController deleteCacheWithName:nil];
             [request setPredicate:predicate];
             
